@@ -19,10 +19,18 @@ public class Main {
             System.out.println("Daily Wage of Employee = " +DailyWage);
         }else{
             System.out.println("Employee is Absent");
-
         }
-
-
-
+        // Adding Part time Employee
+        int Is_part_time = 1;
+        int Is_full_time = 2;
+        double randomCheck1 =  Math.floor(Math.random()*10)%3;
+        if (randomCheck1==1) {
+            System.out.println("Employee is Part time");
+        }else{
+            System.out.println("Employee is Full time");
+        }
+        int parttimeHrs = 4;
+        int PtDailyWage = parttimeHrs*wagePerHrs;
+        System.out.println("Part time Employee daily Wage = " +PtDailyWage);
     }
 }

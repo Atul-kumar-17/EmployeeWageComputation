@@ -4,41 +4,50 @@ public class Main {
         System.out.println("Welcome to the Employee Wage Computation");
 
 // Check Employee is present or not using random
-        double randomCheck = Math.floor(Math.random() * 10) % 2;
-        if (randomCheck == 1) {
+        int randomCheck = (int)Math.floor(Math.random() * 10) % 2;
+        switch ( randomCheck ) {
+            case 1:
             System.out.println("Employee is Present");
-        } else {
+            break;
+            case 2:
             System.out.println("Employee is Absent");
+            break;
         }
 // Calculation of Daily Wage
         int wagePerHrs = 20;
         int fullDayHrs = 8;
         int DailyWage = wagePerHrs * fullDayHrs;
-        if (randomCheck == 1) {
+        switch (randomCheck) {
+            case 1:
             System.out.println("Daily Wage of Employee = " + DailyWage);
-        } else {
+            break;
+            case 2:
             System.out.println("Employee is Absent");
-
+            break;
         }
 
 //  Adding Part time Employee
         int Is_part_time = 1;
         int Is_full_time = 2;
-        double randomCheck1 = Math.floor(Math.random() * 10) % 3;
-        if (randomCheck1 == 1) {
+        int randomCheck1 = (int)Math.floor(Math.random() * 10) % 3;
+        switch (randomCheck1) {
+            case 1:
             System.out.println("Employee is Part time");
-        } else {
+            break;
+            case 2:
             System.out.println("Employee is Full time");
+            break;
         }
         int parttimeHrs = 4;
         int PtDailyWage = parttimeHrs * wagePerHrs;
         System.out.println("Part time Employee daily Wage = " + PtDailyWage);
 
 //  Calculating monthly salary
-        int totalWorkingDays = 20;
-        int Monthly_Salary = DailyWage*totalWorkingDays;
-        int PtMonthlySal = PtDailyWage*parttimeHrs;
-        System.out.println("Full time Employee Monthly Salary = " +Monthly_Salary);
+       // int totalWorkingDays = 20;
+        int totalWorkingHrs =100;
+        int Monthly_Salary = DailyWage*totalWorkingHrs;
+        int PtMonthlySal = PtDailyWage*totalWorkingHrs;
+        System.out.println("Employee Monthly Salary = " +Monthly_Salary);
         System.out.println("Part time Employee Monthly Salary = " +PtMonthlySal);
     }
 }
